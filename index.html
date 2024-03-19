@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>MY| WEB</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#hobi">Hobby</a></li>
+        </ul>
+      </nav>
+      <div class="jumbotron">
+        <h3>HELLO</h3>
+        <h1>World</h1>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <article id="story" class="card" style="background-color: #dcf2ff">
+          <h2>My Story</h2>
+          <p>
+            Namaku Izzudin Ihsan Muzaki. Aku seorang remaja berusia 18 tahun
+            yang lahir di kota Jayapura. Saat ini, aku sedang menempuh
+            pendidikan di SMK Muhammadiyah 7 Gondanglegi. Aku adalah anak ketiga
+            dari empat bersaudara. Setiap hari, aku berjuang untuk meraih
+            impianku. Meskipun lahir di Jayapura, tapi sekarang aku menjalani
+            hari-hariku di Gondanglegi dengan semangat yang membara. Aku punya
+            mimpi besar untuk menjadi seseorang yang dapat memberikan dampak
+            positif bagi lingkungan sekitarku. Aku yakin setiap langkah kecil
+            yang aku ambil sekarang akan membawa aku menuju impian itu.
+          </p>
+          <!--* slider -->
+          <div class="wrapper-slider">
+            <div class="slides">
+              <span id="slide-1"></span>
+              <span id="slide-2"></span>
+              <span id="slide-3"></span>
+              
+              <div class="image-slider">
+                <img src="assets/image/1.jpg" alt="" />
+                <img src="assets/image/2.jpg" alt="" />
+                <img src="assets/image/3.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="navigation">
+              <a href="#slide-1">1</a>
+              <a href="#slide-2">2</a>
+              <a href="#slide-3">3</a>
+            </div>
+          </div>
+        </article>
+        <article
+          id="hobi"
+          class="card"
+          style="background-color: #365486; color: #dcf2ff"
+        >
+          <h2>My Hobby</h2>
+          <p>
+            Hobi-hobi yang aku miliki mencerminkan sisi kreatif dan penasaran
+            dalam diriku. Salah satunya adalah membaca; meresapi halaman demi
+            halaman sebuah cerita memberiku pelajaran hidup dan membuka jendela
+            dunia yang baru. Selain itu, menonton film menjadi pelarian
+            menyenangkan bagiku, mengajakku merasakan beragam emosi dan memahami
+            sudut pandang yang berbeda. Ketika butuh melepas penat, aku suka
+            mendengarkan musik; irama dan liriknya menjadi teman setia yang
+            mengiringi setiap langkahku. Di samping itu, bermain game merupakan
+            cara bagiku untuk bersantai dan menantang diri sendiri. Namun, tak
+            ketinggalan, dunia coding memberiku kesempatan untuk mengembangkan
+            keterampilan teknologi dan mengeksplorasi kreativitas dalam
+            menciptakan sesuatu yang baru. Hobi-hobi ini memberi warna pada
+            kehidupan sehari-hariku, memperkaya pengalaman dan memenuhi
+            kebutuhan akan hiburan dan pengetahuan.
+          </p>
+        </article>
+      </div>
+
+      <!--* /aside -->
+      <aside>
+        <article class="profile" style="padding: 20px; padding-top: 0">
+          <section class="profile-card">
+            <header>
+              <figure>
+                <img src="assets/image/fix.jpg" alt="" />
+                <figcaption></figcaption>
+              </figure>
+            </header>
+            <section>
+              <table>
+                <tr>
+                  <th>Nama :</th>
+                  <td>Izzudin Ihsan Muzaki</td>
+                </tr>
+                <tr>
+                  <th>Lahir :</th>
+                  <td>Jayapura</td>
+                </tr>
+                <tr>
+                  <th>Tgl Lahir :</th>
+                  <td>9 September 2005</td>
+                </tr>
+                <tr>
+                  <th>Alamat :</th>
+                  <td>Jl Jatirenggo</td>
+                </tr>
+              </table>
+            </section>
+          </section>
+        </article>
+
+        <div class="wrapper-friend">
+
+          <div class="tambah-teman">
+            <h3 style="font-size: 30px;">Let's be my friend</h3>
+            <button id="addFriendButton"><img src="assets/image/Plus.png" alt=""></button>
+          </div>
+          <div class="line"></div>
+          
+          <div class="tambah-teman">
+            <h3 style="font-size: 25px;">Zaki's friend list :</h3>
+            <div class="wrapper-friend-list">
+              <ul id="friend">
+                <!-- <li>putra</li> -->
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <p>Izzudin Ihsan Muzaki &copy; 2024, jak_jakik</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
