@@ -14,7 +14,6 @@ body{
     font-family: "Radio Canada", sans-serif;
     margin: 0;
     padding: 0;
-    /* width: 100%; */
     overflow-x: hidden;
 }
 body::-webkit-scrollbar{
@@ -74,6 +73,10 @@ nav a{
     margin-top: 0;
 }
 
+.card{
+    padding: 68px;
+}
+
 main{
     display: flex;
 }
@@ -93,36 +96,38 @@ aside{
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     background-color: var(--bg-primary);
     color: var(--color-secondary);
     border-top: 2px solid #64CCC5;
 }
+
+.profile{
+    width: 17em;
+    margin: 35px;
+}   
 
 .profile-card{
     background-color: var(--bg-secondary);
     border-radius: 10px;
     box-shadow: 0px 1px 8px 1px #4a4d4f;
     padding: 10px;
-    margin-top: 20px;
+    margin: auto;
 }
 
 .profile header {
     text-align: center;
 }
 .profile img {
-    /* margin-top: 30px; */
-    width: 200px;
+    width: 100%;
     border-radius: 5px;
 }
 
 section table{
+    font-size: 1em;
     text-align: center;
-    padding: 10px;
-}
-
-.card{
-    padding: 68px;
-    /* height: 100vh; */
+    /* padding: 10px; */
 }
 
 footer{
@@ -196,14 +201,14 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
 }
 
 .tambah-teman{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 
 .wrapper-friend h3{
@@ -211,36 +216,33 @@ footer{
     align-self: flex-start;
 }
 
-button{
+#addFriendButton{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #6420AA;
-    width: 280px;
-    height: 60px;
+    /* width: 100%; */
+    width: 10em;
+    padding: 0.4em;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-button:hover{
+#addFriendButton:hover{
     background-color: #392467;
 }
 
-button img{
+#addFriendButton img{
     width: 50px;
     height: 50px;
     transition: 0.5s;
 }
 
-button img:hover{
-    color: #64CCC5;
-}
-
 .line{
     margin-top: 50px;
-    width: 300px;
+    width: 90%;
     height: 5px;
     background-color: #ffff;
     border-radius: 50px;
@@ -251,64 +253,68 @@ button img:hover{
 }
 
 .wrapper-friend-list ul{
-    margin: 0;
-    margin-top: 24px;
+    /* margin: 0; */
+    margin-top: 1em;
     padding: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 1em;
 }
 
 .wrapper-friend-list li{
     list-style-type: none;
-    width: 15rem;
+    width: 12em;
     padding: 0.6rem;
-    /* height: 48px; */
     font-size: 1.3em;
     font-weight: 700;
     color: #000;
     background-color: var(--color-secondary);
     border-radius: 50px;
+
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 
-
+/** 0 sampai 1200px */
 @media screen and (max-width: 1200px) {
     main{
         flex-flow: column nowrap;
     }
     main aside{
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: row;
         border-top: none;
+
+        padding: 3em;
     }
     .profile-card{
-        width: 19rem;
-        margin: 3rem;
+        width: 100%;
+        margin: auto;
     }
     .profile{
-        padding: 0px !important;
+        /* width: 30%; */
+        /* padding: 0px !important; */
     }
     .wrapper-friend{
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-self: flex-start;
         justify-content: center;
-        padding: 20px;
     }
     .tambah-teman{
         align-items: center;
+        width: 50%;
     }
     .line{
         rotate: 90deg;
-        margin: -6rem;
+        margin: -5rem;
         align-self: center;
+        width: 30%;
     }
     .wrapper-friend h3{
         align-self: center;
@@ -318,26 +324,36 @@ button img:hover{
 
 
 
-
+/** 0 sampai 768px */
 @media screen and (max-width: 768px) {
+    main{
+        flex-flow: column nowrap;
+    }
     main aside{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     .profile-card{
-        width: 300px;
-        margin: 3rem;
+        width: 100%;
+        margin: auto;
     }
-    .profile{
-        padding: 0px !important;
+    .profile-card img{
+        width: 100%;
+    }
+    .line{
+        rotate: none;
+        margin: 1rem;
+        align-self: center;
     }
     .wrapper-friend{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 3rem;
+        flex-direction: column;
+        align-self: center;
+        gap: 1rem;
+    }
+    .tambah-teman{
+        width: 100%;
     }
     
 }
