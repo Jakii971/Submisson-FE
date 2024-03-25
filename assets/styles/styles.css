@@ -12,6 +12,7 @@
 
 body{
     font-family: "Radio Canada", sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -32,11 +33,11 @@ nav{
     width: 100%;
 }
 
-
 nav ul{
     display: flex;
     justify-content: center;
     gap: 50px;
+    padding: 0;
 }
 
 nav li{
@@ -46,7 +47,7 @@ nav li{
 nav a{
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.1rem;
     color:var(--color-secondary);
 }
 
@@ -61,13 +62,13 @@ nav a{
 }
 
 .jumbotron h3{
-    font-size: 68px;
+    font-size: 65px;
     font-weight: 700;
     color: var(--color-secondary);
     margin-bottom: 0;
 }
 .jumbotron h1{
-    font-size: 120px;
+    font-size: 134px;
     font-weight: 700;
     color: var(--color-primary);
     margin-top: 0;
@@ -85,10 +86,6 @@ main{
     flex: 5;
     display: flex;
     flex-flow: column nowrap;
-}
-
-article p{
-    font-size: 20px;
 }
 
 aside{
@@ -125,17 +122,27 @@ aside{
 }
 
 section table{
-    font-size: 1em;
+    font-size: 100%;
     text-align: center;
     /* padding: 10px; */
 }
 
 footer{
-    padding: 10px;
+    padding: 0.7rem;
     color: white;
     background-color: var(--color-tertiary);
     text-align: center;
     font-weight: bold;
+}
+
+.wrapper-slider{
+    width: 600px;
+    height: auto;
+    padding: 50px 0 50px 0;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
 }
 
 .image-slider{
@@ -145,19 +152,9 @@ footer{
 }
 
 .image-slider img{
-    width: 600px;
+    width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.wrapper-slider{
-    width: 600px;
-    height: auto;
-    padding: 50px 0 50px 0;
-    margin: auto;
-    /* border-radius: 5px; */
-    overflow: hidden;
-    position: relative;
 }
 
 .navigation a{
@@ -221,8 +218,8 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: #6420AA;
-    /* width: 100%; */
-    width: 10em;
+    /* width: 17em; */
+    width: 100%;
     padding: 0.4em;
     border: none;
     border-radius: 50px;
@@ -282,6 +279,12 @@ footer{
 
 /** 0 sampai 1200px */
 @media screen and (max-width: 1200px) {
+    .jumbotron h3{
+        font-size: 45px;
+    }
+    .jumbotron h1{
+        font-size: 104px;
+    }
     main{
         flex-flow: column nowrap;
     }
@@ -296,10 +299,6 @@ footer{
         width: 100%;
         margin: auto;
     }
-    .profile{
-        /* width: 30%; */
-        /* padding: 0px !important; */
-    }
     .wrapper-friend{
         display: flex;
         flex-direction: row;
@@ -312,12 +311,16 @@ footer{
     }
     .line{
         rotate: 90deg;
-        margin: -5rem;
+        /* margin: 1em; */
         align-self: center;
         width: 30%;
     }
     .wrapper-friend h3{
         align-self: center;
+    }
+    .wrapper-friend-list li{
+        width: 100%;
+        font-size: 1.3rem;
     }
     
 }
@@ -326,6 +329,15 @@ footer{
 
 /** 0 sampai 768px */
 @media screen and (max-width: 768px) {
+    nav{
+        border-radius: 0;
+    }
+    .jumbotron h3{
+        font-size: 35px;
+    }
+    .jumbotron h1{
+        font-size: 94px;
+    }
     main{
         flex-flow: column nowrap;
     }
@@ -334,6 +346,20 @@ footer{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding: 1em;
+    }
+    .wrapper-slider{
+        width: 90%;
+    }
+    .navigation{
+        margin-top: -45px;
+    }
+    .navigation a{
+        height: 15px;
+        width: 15px;
+    }
+    .card{
+        padding: 30px;
     }
     .profile-card{
         width: 100%;
@@ -343,6 +369,7 @@ footer{
         width: 100%;
     }
     .line{
+        width: 90%;
         rotate: none;
         margin: 1rem;
         align-self: center;
@@ -352,8 +379,15 @@ footer{
         align-self: center;
         gap: 1rem;
     }
+    .wrapper-friend h3{
+        padding-top: 0;
+    }
     .tambah-teman{
         width: 100%;
+    }
+    .wrapper-friend-list li{
+        max-width: 80%;
+        font-size: 1.3rem;
     }
     
 }
